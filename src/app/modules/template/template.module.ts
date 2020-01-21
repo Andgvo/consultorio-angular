@@ -8,6 +8,7 @@ import { AngularMaterialModule } from './angular-material.module'
 import { MaterialMessagesModule } from './material-messages.module'
 
 /* Components */
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { ViewButtonsComponent } from './view/view-buttons/view-buttons.component';
 import { DNDListComponent } from './view/dndlist/dndlist.component';
 import { FormComponent } from './view/form/form.component';
@@ -19,6 +20,7 @@ import { UsageModule } from './view/usages/usage.module';
 
 @NgModule({
   declarations: [
+    DashboardComponent,
     ViewButtonsComponent,
     DNDListComponent,
     FormComponent,

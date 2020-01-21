@@ -14,22 +14,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { BreadcrumbComponent } from '@shared/breadcrumb/breadcrumb.component';
-import { ToastMessageComponent } from '@shared/toast-message/toast-message.component';
 import { MessagesSnackComponent } from '@shared/messages-snack/messages-snack.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-
-/* PIPES */
-import { ReversePipe } from '@pipes/reverse.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
     BreadcrumbComponent,
-    ToastMessageComponent,
-    MessagesSnackComponent,
-    DashboardComponent,
-    ReversePipe
+    MessagesSnackComponent
   ],
   imports: [
     BrowserModule,
