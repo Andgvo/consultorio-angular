@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BreadcrumbComponent } from '@breadcrumb/breadcrumb.component';
-import { BD_BUTTONS } from '@breadcrumb/ListLinks';
+import { BC_BUTTONS } from "@shared/routing-list/ListLinks";
 
 @Component({
   selector: 'app-view-buttons',
@@ -9,6 +9,6 @@ import { BD_BUTTONS } from '@breadcrumb/ListLinks';
 })
 export class ViewButtonsComponent {
   constructor(){
-    BreadcrumbComponent.update( BD_BUTTONS );
+    BreadcrumbComponent.update( BC_BUTTONS );
   }
 }

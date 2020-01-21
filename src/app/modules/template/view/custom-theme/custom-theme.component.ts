@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BreadcrumbComponent } from "@breadcrumb/breadcrumb.component";
-import { BD_CUSTOM_THEME } from "@breadcrumb/ListLinks";
+import { BC_CUSTOM_THEME } from "@shared/routing-list/ListLinks";
 
 @Component({
   selector: 'app-custom-theme',
@@ -10,7 +10,7 @@ import { BD_CUSTOM_THEME } from "@breadcrumb/ListLinks";
 export class CustomThemeComponent implements OnInit {
 
   constructor() { 
-    BreadcrumbComponent.update(BD_CUSTOM_THEME);
+    BreadcrumbComponent.update(BC_CUSTOM_THEME);
   }
 
   ngOnInit() {

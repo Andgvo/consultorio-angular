@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { BreadcrumbComponent } from '@breadcrumb/breadcrumb.component';
-import { BD_DYNAMIC_FORM } from '@breadcrumb/ListLinks';
+import { BC_DYNAMIC_FORM } from "@shared/routing-list/ListLinks";
 
 export interface TypeOfData {
   name: string;
@@ -17,7 +17,7 @@ export interface TypeOfData {
 export class DynamicFormComponent {
 
   constructor(){
-    BreadcrumbComponent.update( BD_DYNAMIC_FORM );
+    BreadcrumbComponent.update( BC_DYNAMIC_FORM );
   }
 
   typeOfInput: TypeOfData[] = [

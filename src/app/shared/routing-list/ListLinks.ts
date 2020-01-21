@@ -1,44 +1,24 @@
 import { Breadcrumb } from '@models/template/Breadcrumb';
 import { NavigationLink } from '@models/template/NavigationLink';
 
-//RUTAS DE PAGINA
-const LANDINPAGE = new NavigationLink("Inicio", "", "home", "Landingpage");
-const LOGIN = new NavigationLink("Login", "/login", "account_circle", "Inicio de sesión");
-
-//HOME
+const LOGIN = new NavigationLink("Login", "", "account_circle", "Inicio de sesión");
 const HOME = new NavigationLink("Inicio", "/app/", "home", "Recepción de documentos necesarios para el registro");
+const CUSTOM_THEME = new NavigationLink("Custom theme", "view-custom-theme", "format_paint", "Override the default theme and choose your palette colors");
+const USAGE = new NavigationLink("Usage", "view-custom-theme", "format_paint", "How to generate modules and components in this template, structure and more");
+const BUTTONS_THEME = new NavigationLink("Buttons theme", "view-buttons", "radio_button_checked", "Use different buttons bootstrap or angular theme");
+const DRAG_AND_DROP = new NavigationLink("Drag and drop list", "view-DND-list", "format_list_numbered", "Sort your list as you want");
+const FORMS_AND_VALIDATIONS = new NavigationLink("Forms and validation", "view-form", "check_circle", "Validate form with different input");
+const DYNAMIC_FORM = new NavigationLink("Dynamic form", "dynamic-form", "dynamic_feed", "Create a form with your own form elements and parametters");
+const MESSAGES = new NavigationLink("Messages", "view-messages", "message", "Alerts, Messages and tooltip");
+
 export const BC_HOME = new Breadcrumb(HOME);
-
-//DOCUMENTACION
-const DOCUMENTACION = new NavigationLink("Documentación", "/app/documentacion", "folder_open", "Recepción de documentos necesarios para el registro");
-const ADMINISTRAR_DOCUMENTACION = new NavigationLink("Administrar", "/app/documentacion/administrar", "folder_shared", "Agrega, edita o elimina los documentos necesarios para el registro");
-const VALIDAR_DOCUMENTACION = new NavigationLink("Validar", "/app/documentacion/validar", "check_box", "Valida la información de los aspirantes que ya han llenado su información");
-export const BC_DOCUMENTACION = new Breadcrumb(DOCUMENTACION, [HOME]);
-export const BC_ADMINISTRAR_DOCUMENTACION = new Breadcrumb(ADMINISTRAR_DOCUMENTACION, [HOME, DOCUMENTACION]);
-export const BC_VALIDAR_DOCUMENTACION = new Breadcrumb(VALIDAR_DOCUMENTACION, [HOME, DOCUMENTACION]);
-
-//EVALUACION
-const EVALUACION = new NavigationLink("Evaluación", "/app/evaluacion", "spellcheck", "Simulador de exámen y publicación de resultados");
-export const BC_EVALUACION = new Breadcrumb(EVALUACION, [HOME]);
-
-//CONVOCATORIA
-const CONVOCATORIA = new NavigationLink("Convocatoria", "/app/convocatoria", "event", "Convocatoria para realizar el proceso de admisión");
-export const BC_CONVOCATORIA = new Breadcrumb(CONVOCATORIA, [HOME]);
-
-//PAGOS
-const PAGOS = new NavigationLink("Pagos", "/app/pagos", "credit_card", "Generación de lineas de pagos");
-export const BC_PAGOS = new Breadcrumb(PAGOS, [HOME]);
-
-//ETAPAS
-const ETAPAS = new NavigationLink("Gestión Etapas", "/app/etapas", "dynamic_feed", "Gestiona el orden y fecha de las etapas");
-export const BC_ETAPAS = new Breadcrumb(ETAPAS, [HOME]);
-
-//USUARIOS
-const USUARIOS = new NavigationLink("Gestión Usuarios", "/app/usuarios", "people_outline", "Generación los usuarios y grupos de la aplicacion");
-export const BC_USUARIOS = new Breadcrumb(USUARIOS, [HOME]);
+export const BC_BUTTONS = new Breadcrumb(BUTTONS_THEME, [HOME]);
+export const BC_DRAG_AND_DROP = new Breadcrumb(DRAG_AND_DROP, [HOME]);
+export const BC_FORMS_AND_VALIDATION = new Breadcrumb(FORMS_AND_VALIDATIONS, [HOME]);
+export const BC_DYNAMIC_FORM = new Breadcrumb(DYNAMIC_FORM, [HOME]);
+export const BC_MESSAGES = new Breadcrumb(MESSAGES, [HOME]);
+export const BC_CUSTOM_THEME = new Breadcrumb(CUSTOM_THEME, [HOME]);
 
 //Nomenclatura de breadcrums BC_Name_Component
-export const linksAdmin: NavigationLink[] = [HOME, DOCUMENTACION, EVALUACION, CONVOCATORIA, PAGOS, ETAPAS, USUARIOS];
-export const linksPage: NavigationLink[] = [LANDINPAGE, LOGIN];
-export const linksDocumentacionAdmin: NavigationLink[] = [VALIDAR_DOCUMENTACION, ADMINISTRAR_DOCUMENTACION];
-export const linksDocumentacionAspirante: NavigationLink[] = [VALIDAR_DOCUMENTACION, ADMINISTRAR_DOCUMENTACION];
+export const linksAdmin: NavigationLink[] = [HOME, CUSTOM_THEME, USAGE, BUTTONS_THEME, DRAG_AND_DROP, FORMS_AND_VALIDATIONS, DYNAMIC_FORM, MESSAGES];
+export const linksPage: NavigationLink[] = [LOGIN];
