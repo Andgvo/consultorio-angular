@@ -9,25 +9,10 @@ import { MaterialMessagesModule } from './material-messages.module'
 
 /* Components */
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ViewButtonsComponent } from './view/view-buttons/view-buttons.component';
-import { DNDListComponent } from './view/dndlist/dndlist.component';
-import { FormComponent } from './view/form/form.component';
-import { DialogForm } from './view/form/form.component';
-import { DynamicFormComponent } from './view/dynamic-form/dynamic-form.component';
-import { MessagesComponent } from './view/messages/messages.component';
-import { CustomThemeComponent } from './view/custom-theme/custom-theme.component';
-import { UsageModule } from './view/usages/usage.module';
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    ViewButtonsComponent,
-    DNDListComponent,
-    FormComponent,
-    DialogForm,
-    DynamicFormComponent,
-    MessagesComponent,
-    CustomThemeComponent
   ],
   imports: [
     CommonModule,
@@ -35,8 +20,7 @@ import { UsageModule } from './view/usages/usage.module';
     MaterialMessagesModule,
     TemplateRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
-    UsageModule,
+    ReactiveFormsModule
   ]
 })
 export class TemplateModule { }

@@ -3,21 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 /* Components view examples */
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ViewButtonsComponent } from './view/view-buttons/view-buttons.component';
-import { DNDListComponent } from './view/dndlist/dndlist.component';
-import { FormComponent } from './view/form/form.component';
-import { DynamicFormComponent } from './view/dynamic-form/dynamic-form.component';
-import { MessagesComponent } from './view/messages/messages.component';
-import { CustomThemeComponent } from './view/custom-theme/custom-theme.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
-  { path:'view-custom-theme' , component: CustomThemeComponent },
-  { path:'view-buttons' , component: ViewButtonsComponent },
-  { path:'view-DND-list' , component: DNDListComponent },
-  { path:'view-form' , component: FormComponent },
-  { path:'dynamic-form' , component: DynamicFormComponent },
-  { path:'view-messages' , component: MessagesComponent },
+  { path: 'paciente', loadChildren: () => import('@modules/paciente/paciente.module').then( m => m.PacienteModule ) }
 ];
 
 @NgModule({
