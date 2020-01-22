@@ -17,6 +17,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { BreadcrumbComponent } from '@shared/breadcrumb/breadcrumb.component';
 import { MessagesSnackComponent } from '@shared/messages-snack/messages-snack.component';
 import { PacienteService } from '@services/paciente/paciente.service';
+import { MessagesService } from '@services/messages.service';
 
 @NgModule({
   declarations: [
@@ -33,9 +34,10 @@ import { PacienteService } from '@services/paciente/paciente.service';
     AngularMaterialTemplateModule,
     TemplateModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [PacienteService],
+  exports: [ MessagesSnackComponent ],
+  providers: [PacienteService, MessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

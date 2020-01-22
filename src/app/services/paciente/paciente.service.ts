@@ -13,7 +13,8 @@ export class PacienteService {
   }
 
   getAll(): Observable<any> {
-    return this.http.get(this.API + 'getAllPaciente');
+    console.log(this.PACIENTE_API + 'getAllPaciente');
+    return this.http.get(this.PACIENTE_API + 'getAllPaciente');
   }
 
   get(id: string) {
@@ -28,8 +29,8 @@ export class PacienteService {
     return result;
   }
 
-  remove(href: string) {
-    return this.http.delete(href);
+  remove(id) {
+    return this.http.delete(this.PACIENTE_API+'deletePaciente/'+id);
   }
 
 }
